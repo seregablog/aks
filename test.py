@@ -23,7 +23,7 @@ class TestAks(unittest.TestCase):
     def testFindR(self):
         aks = Aks()
         self.assertEqual(29, aks.findR(31))
-        self.assertEqual(263, aks.findR(74513))
+        self.assertEqual(43, aks.findR(43))
     
     def testCheckGcdTrue(self):
         aks = Aks()
@@ -71,9 +71,6 @@ class TestAks(unittest.TestCase):
     
     
     
-    
-
-
 
 if __name__ == '__main__':
     unittest.main()

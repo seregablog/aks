@@ -17,13 +17,14 @@ class Aks:
         
         if (self.checkPolynom(n, r)):
             return False
-    
+
         return True
 
     def isPerfectPower(self, n: int) -> bool:
-        maxB = math.ceil(math.log(n, 2))
+        maxB = math.floor(math.log(n, 2))
         if maxB <= 2:
             maxB = 3
+
             
         for b in range(2, maxB):
             if pow(math.floor(pow(n, 1.0 / b)), b) == n:
@@ -31,7 +32,8 @@ class Aks:
         return False
     
     def findR(self, n: int) -> int:
-        ord = math.ceil(math.log(n, 2) ** 2)
+        ord = math.ceil(math.log(n, 2) ** 2) + 1
+
         r = 2
 
         while True:
@@ -59,9 +61,6 @@ class Aks:
             p1 = PolyMod([a, 1], n, r) ** n
             p2 = PolyMod([a] + [0] * (n - 1) + [1], n, r).mod()
             if not p1 == p2:
-                print('A=', a)
-                print(p1)
-                print(p2)
                 return True
 
         return False
