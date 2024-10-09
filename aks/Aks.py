@@ -56,7 +56,6 @@ class Aks:
         max = math.ceil(math.sqrt(self.__euler(r)) * math.log(n, 2))
         
         for a in range(1, max):
-            print ('POLYNOM')
             p1 = PolyMod([a, 1], n, r) ** n
             p2 = PolyMod([a] + [0] * (n - 1) + [1], n, r).mod()
             if not p1 == p2:

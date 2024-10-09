@@ -1,9 +1,10 @@
 from aks.Aks import *
 
-m = 1000
+aks = Aks()
+m = 100
 count = 0
 for i in range(1, m):
-   if aksTest.isPrime(i):
+   if aks.isPrime(i):
       count += 1
       print(i)
 
