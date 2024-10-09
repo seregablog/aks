@@ -1,0 +1,11 @@
+services:
+  aks:
+    build: "./docker"
+    container_name: aks
+    volumes:
+      - ./:/home:rw
+    stdin_open: true
+    tty: true
+    working_dir: /home
+    environment:
+      - PYTHONPATH=/home/aks
