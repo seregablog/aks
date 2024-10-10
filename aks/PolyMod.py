@@ -57,7 +57,7 @@ class PolyMod:
         return s
 
     def mod(self):
-        m = self.r - 1
+        m = self.r
         for i in range(len(self.coeffs) - 1, m - 1, -1):
             self.coeffs[i - m] = (self.coeffs[i - m] + self.coeffs[i]) % self.n
             self.coeffs[i] = 0
@@ -66,7 +66,8 @@ class PolyMod:
     def __str__(self):
         s = []
         for i in range(len(self.coeffs)):
-            s.append(str(self.coeffs[i]) + '*X^' + str(i))
+            if not self.coeffs[i] == 0:
+                s.append(str(self.coeffs[i]) + '*x^' + str(i))
         
         s.reverse()
         return '+'.join(s) + "\n"

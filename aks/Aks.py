@@ -55,7 +55,7 @@ class Aks:
         return False
     
     def checkPolynom(self, n: int, r: int) -> bool:
-        max = math.ceil(math.sqrt(self.__euler(r)) * math.log(n, 2))
+        max = math.ceil(math.sqrt(self.__euler(r)) * math.log(n, 2)) + 1
         
         for a in range(1, max):
             p1 = PolyMod([a, 1], n, r) ** n
