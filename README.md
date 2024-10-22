@@ -1,15 +1,15 @@
 # AKS primality test
-Implementation of Agrawal–Kayal–Saxena primality test in python
+Implementation of Agrawal-Kayal-Saxena primality test in python.
 
-# Structure
-AKS test implementation - `Aks.py`  
-Test specific number - `number_test.py`:  
+# Examples
+Prime number:
 ```bash
 python number_test.py 41
 Number 41 is prime
 ```
 
+Composite number:  
 ```bash
 python number_test.py 42
-Number 42 is not prime
+Number 42 is composite
 ``` 

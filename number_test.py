@@ -7,6 +7,6 @@ aks = Aks()
 if aks.isPrime(number):
     answer = 'prime'
 else:
-    answer = 'not prime'
+    answer = 'composite'
 print('Number ' + str(number) + ' is ' + answer)
 
